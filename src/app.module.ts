@@ -12,6 +12,8 @@ import { Category } from './category/entities/category.entity';
 import { Counter } from './common/entities/counter.entity';
 import { HomeModule } from './home/home.module';
 import { HomeManager } from './home/entities/home.entity';
+import { LeadsModule } from './leads/leads.module';
+import { Lead } from './leads/entities/leads.entity';
 
 @Module({
   imports: [
@@ -19,9 +21,9 @@ import { HomeManager } from './home/entities/home.entity';
       type: 'mongodb',
       url: 'mongodb+srv://singhmak305:singhmak305@nodoo.58tkn.mongodb.net/blogfly',   // ⭐ Your Mongo URL
       synchronize: true,   // ❗ Turn OFF in production
-      entities: [User, Post, Category, Counter, HomeManager],
+      entities: [User, Post, Category, Counter, HomeManager, Lead],
     }),
-    AuthModule, UsersModule, PostModule, CategoryModule, HomeModule],
+    AuthModule, UsersModule, PostModule, CategoryModule, HomeModule, LeadsModule],
   controllers: [AppController],
   providers: [AppService],
 })

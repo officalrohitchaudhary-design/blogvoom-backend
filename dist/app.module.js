@@ -21,6 +21,8 @@ const category_entity_1 = require("./category/entities/category.entity");
 const counter_entity_1 = require("./common/entities/counter.entity");
 const home_module_1 = require("./home/home.module");
 const home_entity_1 = require("./home/entities/home.entity");
+const leads_module_1 = require("./leads/leads.module");
+const leads_entity_1 = require("./leads/entities/leads.entity");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -31,9 +33,9 @@ exports.AppModule = AppModule = __decorate([
                 type: 'mongodb',
                 url: 'mongodb+srv://singhmak305:singhmak305@nodoo.58tkn.mongodb.net/blogfly',
                 synchronize: true,
-                entities: [users_entity_1.User, post_entity_1.Post, category_entity_1.Category, counter_entity_1.Counter, home_entity_1.HomeManager],
+                entities: [users_entity_1.User, post_entity_1.Post, category_entity_1.Category, counter_entity_1.Counter, home_entity_1.HomeManager, leads_entity_1.Lead],
             }),
-            auth_module_1.AuthModule, users_module_1.UsersModule, post_module_1.PostModule, category_module_1.CategoryModule, home_module_1.HomeModule
+            auth_module_1.AuthModule, users_module_1.UsersModule, post_module_1.PostModule, category_module_1.CategoryModule, home_module_1.HomeModule, leads_module_1.LeadsModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
