@@ -6,11 +6,8 @@ async function bootstrap() {
   
   // Enable CORS
   app.enableCors({
-    origin: [
-      'http://localhost:3000',
-      'https://www.blogvoom.in/',
-      // Add other allowed origins as needed
-    ],
+    origin: ['*'],
+
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
