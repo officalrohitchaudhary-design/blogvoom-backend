@@ -6,13 +6,12 @@ async function bootstrap() {
   
   // Enable CORS
   app.enableCors({
-    origin: ['*'],
+    origin: ['https://www.blogvoom.in/', 'http://localhost:3000'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-    allowedHeaders: ['Content-Type'],
-    credentials: false,
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
   });
   
-  const port = 3000;
-  await app.listen(port);
+  await app.listen(3000);
 }
 bootstrap();
